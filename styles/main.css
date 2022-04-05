@@ -477,18 +477,6 @@ a:focus {
   text-align: center;
   color: var(--main-color-extra-light);
 }
-.load-container {
-  display: flex;
-  justify-content: center;
-}
-.loader {
-  border-radius: 50%;
-  width: 8rem;
-  height: 8rem;
-  border: 16px solid rgba(0, 0, 0, 0.4);
-  border-left: 16px solid #ffffff;
-  animation: load 1000ms infinite linear;
-}
 
 .svg-wrap {
   width: 200px;
@@ -740,11 +728,16 @@ input[type="checkbox"]:checked::after {
   }
   .main-nav {
     background-color: transparent;
-    position: absolute;
+    position: static;
     top: 0;
     right: 0;
     /* z-index: 1; */
   }
+
+  .form main {
+    max-width: 70rem;
+  }
+
   section {
     max-width: 40rem;
     align-self: center;
@@ -768,6 +761,10 @@ input[type="checkbox"]:checked::after {
   label[for="haiku"],
   textarea,
   button {
+    grid-column-start: 2;
+  }
+  fieldset,
+  label[for="anthem"] {
     grid-column-start: 2;
   }
 }
