@@ -728,10 +728,11 @@ input[type="checkbox"]:checked::after {
   }
   .main-nav {
     background-color: transparent;
-    position: static;
+    position: absolute;
     top: 0;
     right: 0;
     /* z-index: 1; */
+    bottom: unset;
   }
 
   .form main {
@@ -766,6 +767,9 @@ input[type="checkbox"]:checked::after {
   fieldset,
   label[for="anthem"] {
     grid-column-start: 2;
+    justify-self: start;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 
